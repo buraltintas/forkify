@@ -75,8 +75,6 @@ const controlServings = function (newServings) {
   model.updateServings(newServings);
   console.log(model.state.recipe);
 
-  // update the recipe view
-  // recipeView.render(model.state.recipe);
   recipeView.update(model.state.recipe);
 };
 
@@ -114,7 +112,6 @@ const controlAddRecipe = async function (newRecipe) {
     console.error(err);
     addRecipeView.renderError(err.message);
   }
-  // location.reload();
 };
 
 const init = function () {
